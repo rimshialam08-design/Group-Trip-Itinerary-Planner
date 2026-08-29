@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Bali Expedition - Trip Room</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-primary-fixed-variant": "#39475f",
+                      "surface-dim": "#d9dadb",
+                      "primary-container": "#0d1c32",
+                      "secondary-fixed": "#ffdad5",
+                      "on-surface": "#191c1d",
+                      "on-tertiary-container": "#00948d",
+                      "on-error": "#ffffff",
+                      "surface-tint": "#515f78",
+                      "on-secondary-fixed-variant": "#8b1a16",
+                      "on-tertiary-fixed": "#00201e",
+                      "tertiary-fixed-dim": "#59dad1",
+                      "surface-bright": "#f8f9fa",
+                      "primary-fixed-dim": "#b9c7e4",
+                      "surface": "#f8f9fa",
+                      "surface-container-highest": "#e1e3e4",
+                      "inverse-on-surface": "#f0f1f2",
+                      "on-secondary-fixed": "#410001",
+                      "surface-container-low": "#f3f4f5",
+                      "on-tertiary-fixed-variant": "#00504c",
+                      "on-tertiary": "#ffffff",
+                      "tertiary": "#000000",
+                      "on-background": "#191c1d",
+                      "secondary-container": "#fd6e60",
+                      "on-surface-variant": "#44474d",
+                      "on-secondary": "#ffffff",
+                      "surface-container": "#edeeef",
+                      "outline": "#75777e",
+                      "inverse-primary": "#b9c7e4",
+                      "secondary": "#ac332a",
+                      "primary": "#000000",
+                      "on-primary-container": "#76849f",
+                      "secondary-fixed-dim": "#ffb4aa",
+                      "primary-fixed": "#d6e3ff",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-variant": "#e1e3e4",
+                      "tertiary-container": "#00201e",
+                      "error": "#ba1a1a",
+                      "on-primary": "#ffffff",
+                      "surface-container-high": "#e7e8e9",
+                      "error-container": "#ffdad6",
+                      "on-secondary-container": "#6d0005",
+                      "outline-variant": "#c5c6cd",
+                      "tertiary-fixed": "#79f6ed",
+                      "on-error-container": "#93000a",
+                      "on-primary-fixed": "#0d1c32",
+                      "inverse-surface": "#2e3132",
+                      "background": "#f8f9fa"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "stack-sm": "8px",
+                      "unit": "4px",
+                      "margin-desktop": "40px",
+                      "gutter": "16px",
+                      "stack-md": "16px",
+                      "stack-lg": "32px",
+                      "margin-mobile": "20px"
+              },
+              "fontFamily": {
+                      "body-md": ["Inter"],
+                      "body-lg": ["Inter"],
+                      "mono-data": ["Inter"],
+                      "headline-lg": ["Inter"],
+                      "display-lg": ["Inter"],
+                      "body-sm": ["Inter"],
+                      "headline-md": ["Inter"],
+                      "label-caps": ["Inter"],
+                      "headline-lg-mobile": ["Inter"]
+              },
+              "fontSize": {
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "mono-data": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                      "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                      "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                      "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "headline-lg-mobile": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700"}]
+              }
+            },
+          }
+        }
+    </script>
+<style>
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background-color: #c5c6cd;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md h-screen flex overflow-hidden">
+<!-- SideNavBar -->
+<nav class="bg-surface-container-lowest dark:bg-surface-container-low shadow-md dark:shadow-none h-screen w-64 left-0 sticky flex flex-col py-stack-lg px-4 gap-stack-md z-50">
+<div class="flex items-center gap-3 px-4 mb-stack-lg">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-secondary-container" data-weight="fill" style="font-variation-settings: 'FILL' 1;">explore</span>
+</div>
+<div>
+<h1 class="text-headline-md font-headline-md text-secondary truncate">OOmechala</h1>
+<p class="text-label-caps font-label-caps text-on-surface-variant">Organized Adventure</p>
+</div>
+</div>
+<div class="flex-1 overflow-y-auto custom-scrollbar flex flex-col gap-unit">
+<!-- Active Tab -->
+<a class="flex items-center gap-3 px-4 py-3 bg-secondary-container text-on-secondary-container rounded-xl font-bold active:scale-98 transition-all duration-200" href="#">
+<span class="material-symbols-outlined">map</span>
+<span class="text-body-md font-body-md font-medium">My Trips</span>
+</a>
+<!-- Inactive Tabs -->
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high active:scale-98 transition-all duration-200 rounded-xl" href="#">
+<span class="material-symbols-outlined">group</span>
+<span class="text-body-md font-body-md font-medium">Collaborators</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high active:scale-98 transition-all duration-200 rounded-xl" href="#">
+<span class="material-symbols-outlined">smart_toy</span>
+<span class="text-body-md font-body-md font-medium">Itinerary AI</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high active:scale-98 transition-all duration-200 rounded-xl" href="#">
+<span class="material-symbols-outlined">payments</span>
+<span class="text-body-md font-body-md font-medium">Budget</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high active:scale-98 transition-all duration-200 rounded-xl" href="#">
+<span class="material-symbols-outlined">how_to_vote</span>
+<span class="text-body-md font-body-md font-medium">Voting</span>
+</a>
+</div>
+<div class="mt-auto flex flex-col gap-unit border-t border-outline-variant pt-stack-md">
+<button class="w-full flex items-center justify-center gap-2 px-4 py-2 rounded-full border border-on-tertiary-container text-on-tertiary-container hover:bg-surface-container-high transition-colors text-body-sm font-medium">
+<span class="material-symbols-outlined text-sm">person_add</span>
+                Invite Friends
+            </button>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high active:scale-98 transition-all duration-200 rounded-xl mt-2" href="#">
+<span class="material-symbols-outlined">help_outline</span>
+<span class="text-body-md font-body-md font-medium">Help</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high active:scale-98 transition-all duration-200 rounded-xl" href="#">
+<span class="material-symbols-outlined">logout</span>
+<span class="text-body-md font-body-md font-medium">Sign Out</span>
+</a>
+</div>
+</nav>
+<!-- Main Workspace -->
+<main class="flex-1 flex flex-col h-screen relative bg-surface-bright">
+<!-- Top App Bar -->
+<header class="flex justify-between items-center px-margin-desktop py-4 w-full z-40 bg-surface-container-lowest shadow-[0px_4px_20px_rgba(10,25,47,0.05)] sticky top-0">
+<div class="flex items-center gap-4">
+<h2 class="text-headline-lg font-headline-lg text-primary tracking-tight">Bali Expedition</h2>
+<span class="px-2 py-1 bg-primary-fixed text-on-primary-fixed rounded-xl text-label-caps font-label-caps uppercase tracking-wider">Planning</span>
+</div>
+<div class="flex items-center gap-6">
+<!-- Avatar Stack -->
+<div class="flex -space-x-3">
+<img class="w-10 h-10 rounded-full border-2 border-surface-container-lowest object-cover z-30 relative" data-alt="A small, circular profile picture of a young professional woman with dark hair, smiling slightly, set against a soft, light-mode background. The aesthetic is clean, corporate, and soft-minimalist." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfqg6B3U2bGtgGn_iOVq4j7quruADKJRSnzBDyxZmsWmxaBg0-31MCpFVwzguYrW2FthpJzM3naE2lDNgvPrmSLEFzV7OCtaf5j-OwXemf_ZMO57tm953wTSxNNzlUX8l5-vbqg6VO51hP09bx9QWyEaxocCpkyGWUjJhLCjuFG77ULkzzVKzdePdOFhnTxp7IqR1zGlyM6Y040DA5WoEwF4lfoCq6DjRfyAqunx6K_eLEZ6gBbHjw"/>
+<img class="w-10 h-10 rounded-full border-2 border-surface-container-lowest object-cover z-20 relative" data-alt="A small, circular profile picture of a young man with glasses, looking thoughtful, set against a pristine white background. Modern, soft-minimalist style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHdE1atIfQyL8hi6ve0pE2ZWhCIWHTmdBMr9EqXmnLMJnbDbkmQq-on-5_leLQ7WWDjO0EAxPjiMFLtajfHnNrYUbQg5gGbjtkKDVb8ofmQ_I7m-xga1VKdOgJsWK0m0YYhEPi3eppaSiOktTleqaG6pkJzPM3y-yL9I-3HhegK_Pz6uGbgjtdiYMa3rcACmco4HN_-yGG2h_5282OZ8PjPaQBKZ3GRsKhheQx0G8xTQk9yU10S0OR"/>
+<img class="w-10 h-10 rounded-full border-2 border-surface-container-lowest object-cover z-10 relative" data-alt="A small, circular profile picture of an older woman with short grey hair, warm expression, light corporate background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmmCvEzWrKxxZKG3JiY87OVNMWGCYuEIoBOl6cE2lz1CpeN0gk5jVeRFwSzwo2bwxzxp_P-rgBNLPXamqqQSxXFOX7e8EtoryNzw2-ZsiDnAjU8nZHXWchAaU9Y_A0tOHpkfAeQN_suzVSUu6jib70pYmyg5qyv-xptzlkiHsYUuHEkTJDcnOwDkMsMdABnX097hs0fxxqsb8RDbPOh1OS7nGlXyeAtGjmY3HRVgZrkyI2lqK5fdqn"/>
+<div class="w-10 h-10 rounded-full border-2 border-surface-container-lowest bg-surface-container-high flex items-center justify-center text-body-sm font-medium text-on-surface-variant z-0 relative">
+                        +2
+                    </div>
+</div>
+<div class="flex items-center gap-3">
+<button class="w-10 h-10 rounded-full hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant transition-colors relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-secondary rounded-full"></span>
+</button>
+<button class="w-10 h-10 rounded-full hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant transition-colors">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Multi-pane Content -->
+<div class="flex-1 flex overflow-hidden p-gutter gap-gutter bg-background">
+<!-- Left Pane: Group Chat & Logistics -->
+<section class="flex-[3] flex flex-col bg-surface-container-lowest rounded-xl shadow-[0px_4px_20px_rgba(10,25,47,0.05)] overflow-hidden border border-surface-container-low">
+<!-- Sticky Logistics Header -->
+<div class="bg-surface-container-low p-4 flex items-center justify-between border-b border-surface-container">
+<div class="flex items-center gap-4 flex-1">
+<div class="flex-1">
+<p class="text-label-caps font-label-caps text-on-surface-variant mb-1">Starting Point</p>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-outline">flight_takeoff</span>
+<span class="text-body-md font-body-md font-medium text-on-surface truncate">San Francisco (SFO)</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant px-4">arrow_forward</span>
+<div class="flex-1">
+<p class="text-label-caps font-label-caps text-on-surface-variant mb-1">Destination</p>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">flight_land</span>
+<span class="text-body-md font-body-md font-medium text-on-surface truncate">Bali, Indonesia (DPS)</span>
+</div>
+</div>
+</div>
+<button class="ml-4 p-2 rounded-full hover:bg-surface-container-high text-on-tertiary-container transition-colors">
+<span class="material-symbols-outlined">edit_location</span>
+</button>
+</div>
+<!-- Chat Messages Area -->
+<div class="flex-1 overflow-y-auto custom-scrollbar p-6 flex flex-col gap-stack-md bg-surface-bright">
+<!-- Date Separator -->
+<div class="flex items-center justify-center my-2">
+<span class="bg-surface-container-high text-on-surface-variant text-label-caps font-label-caps px-3 py-1 rounded-full">Today</span>
+</div>
+<!-- System Message -->
+<div class="flex justify-center">
+<div class="bg-primary-fixed-dim bg-opacity-20 text-on-primary-fixed-variant text-body-sm font-body-sm px-4 py-2 rounded-full flex items-center gap-2 max-w-md text-center">
+<span class="material-symbols-outlined text-sm">auto_awesome</span>
+                            Itinerary AI suggested 3 new activities for Day 2.
+                        </div>
+</div>
+<!-- Other User Message -->
+<div class="flex gap-3 max-w-[80%]">
+<img class="w-8 h-8 rounded-full object-cover shrink-0 mt-1" data-alt="A small circular avatar of a young man with glasses, set against a white background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdZxYP6GGMj2WToDB_Y8jCcer0O6vzWHdLAiiTCGcQAVn7kzYdXOAj_KwvThih0azrU-5Q93H_-o4Bbm0xaH1Z3bbWxIfM5o8_jm1Yc5W0hJyJN6OPpt4dsufWpbEPyTdRWr_zFav3KxdFStzItllPRey8t11PQv5G3Aeu-wFxDhGzHUYiojOROuxTH4ZlOsBXsXdtMZOVHRsXBy44lvg8U4QpYWleiqZ8VpKd61X6MxTj_8NpKyNZ"/>
+<div class="flex flex-col gap-1">
+<div class="flex items-baseline gap-2">
+<span class="text-body-sm font-body-sm font-medium text-on-surface">David C.</span>
+<span class="text-label-caps font-label-caps text-on-surface-variant">10:42 AM</span>
+</div>
+<div class="bg-surface-container px-4 py-3 rounded-2xl rounded-tl-sm text-body-md font-body-md text-on-surface">
+                                I think we should definitely try to fit in the Mount Batur sunrise trek. Anyone opposed to waking up at 2 AM? 😅
+                            </div>
+<!-- Reaction -->
+<div class="flex gap-1 mt-1">
+<button class="bg-surface-container-high hover:bg-surface-container-highest px-2 py-1 rounded-full text-sm flex items-center gap-1 transition-colors border border-surface-variant">
+                                    👍 <span class="text-label-caps font-label-caps text-on-surface-variant">2</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Current User Message -->
+<div class="flex gap-3 max-w-[80%] self-end flex-row-reverse">
+<img class="w-8 h-8 rounded-full object-cover shrink-0 mt-1" data-alt="A small circular avatar of a young professional woman, set against a clean background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7xfsHejvmkiO3OUuaikzUyxc2xmBkJBSBPpDlsO7j_rBX9lY0VMjGUQZIsCQ61YMy3k9ju4gFtKytFgt4WTyXg7YWb8oXV5QMTJkS1pyv9rNxF16a2yw_vEZ7tWs-SnTL47FuhhSo5MxeI0SqXDvpzeGe-4kWv2NtWolq6Djp6H6YQRAKuhJPdYCemssBk7-olA9j0tdf1mIITAzTnBmfxPBdx4R8x88_8aMBbIoLgoNiBgDdBbvW"/>
+<div class="flex flex-col gap-1 items-end">
+<div class="flex items-baseline gap-2 flex-row-reverse">
+<span class="text-body-sm font-body-sm font-medium text-on-surface">You</span>
+<span class="text-label-caps font-label-caps text-on-surface-variant">10:45 AM</span>
+</div>
+<div class="bg-secondary-fixed text-on-secondary-fixed px-4 py-3 rounded-2xl rounded-tr-sm text-body-md font-body-md">
+                                I'm in! Let's schedule it for Day 3 so we have time to recover from the flight first.
+                            </div>
+</div>
+</div>
+<!-- System action message -->
+<div class="flex justify-center my-4">
+<div class="flex items-center gap-2 text-body-sm font-body-sm text-on-surface-variant bg-surface-container px-4 py-2 rounded-full border border-surface-variant">
+<span class="material-symbols-outlined text-sm">edit_calendar</span>
+                            Sarah moved "Mount Batur Trek" to Day 3
+                        </div>
+</div>
+</div>
+<!-- Chat Input -->
+<div class="p-4 bg-surface-container-lowest border-t border-surface-container">
+<div class="flex items-end gap-2 bg-surface-container-low rounded-xl border border-outline-variant focus-within:border-primary-container focus-within:ring-1 focus-within:ring-primary-container transition-all p-2">
+<button class="p-2 text-on-surface-variant hover:text-primary transition-colors rounded-full hover:bg-surface-container-high">
+<span class="material-symbols-outlined">add_circle</span>
+</button>
+<textarea class="flex-1 bg-transparent border-none focus:ring-0 resize-none text-body-md font-body-md text-on-surface py-2 custom-scrollbar max-h-32 min-h-[44px]" placeholder="Type a message or command (/)..." rows="1"></textarea>
+<button class="p-2 bg-secondary text-white rounded-lg hover:bg-opacity-90 transition-all flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Right Pane: Activity Feed & Itinerary Preview -->
+<aside class="flex-[2] flex flex-col gap-gutter min-w-[320px] max-w-[400px]">
+<!-- Quick Stats Bento -->
+<div class="grid grid-cols-2 gap-unit">
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-[0px_4px_20px_rgba(10,25,47,0.05)] flex flex-col gap-1 border border-surface-container-low">
+<span class="material-symbols-outlined text-on-tertiary-container mb-1">today</span>
+<span class="text-headline-md font-headline-md text-on-surface">12 Days</span>
+<span class="text-label-caps font-label-caps text-on-surface-variant">Duration</span>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-[0px_4px_20px_rgba(10,25,47,0.05)] flex flex-col gap-1 border border-surface-container-low">
+<span class="material-symbols-outlined text-secondary mb-1">account_balance_wallet</span>
+<span class="text-headline-md font-headline-md text-on-surface">$2.4k</span>
+<span class="text-label-caps font-label-caps text-on-surface-variant">Est. Budget</span>
+</div>
+</div>
+<!-- Itinerary Preview -->
+<section class="flex-1 bg-surface-container-lowest rounded-xl shadow-[0px_4px_20px_rgba(10,25,47,0.05)] border border-surface-container-low flex flex-col overflow-hidden">
+<div class="p-4 border-b border-surface-container flex justify-between items-center bg-surface-container-lowest sticky top-0 z-10">
+<h3 class="text-headline-md font-headline-md text-on-surface">Draft Itinerary</h3>
+<button class="text-body-sm font-body-sm text-on-tertiary-container hover:underline font-medium">View Full</button>
+</div>
+<div class="flex-1 overflow-y-auto custom-scrollbar p-4 flex flex-col gap-stack-lg relative">
+<!-- Connecting Line for timeline -->
+<div class="absolute left-6 top-8 bottom-4 w-px bg-surface-variant z-0"></div>
+<!-- Day 1 -->
+<div class="relative z-10">
+<div class="flex items-center gap-3 mb-stack-sm bg-surface-container-lowest py-1">
+<div class="w-4 h-4 rounded-full bg-secondary border-4 border-surface-container-lowest relative z-10"></div>
+<h4 class="text-body-lg font-body-lg font-semibold text-on-surface">Day 1: Arrival</h4>
+<span class="text-label-caps font-label-caps text-on-surface-variant ml-auto">Oct 12</span>
+</div>
+<div class="flex flex-col gap-stack-sm pl-7">
+<!-- Activity Card (Transit) -->
+<div class="bg-surface-bright rounded-lg p-3 shadow-sm border-l-4 border-l-on-tertiary-container hover:shadow-md transition-shadow cursor-pointer relative group">
+<div class="flex justify-between items-start mb-1">
+<span class="text-body-sm font-body-sm font-medium text-on-surface">Flight SQ 32</span>
+<span class="text-label-caps font-label-caps text-on-surface-variant">14:00</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant">SFO to DPS via SIN</p>
+</div>
+</div>
+</div>
+<!-- Day 2 -->
+<div class="relative z-10">
+<div class="flex items-center gap-3 mb-stack-sm bg-surface-container-lowest py-1">
+<div class="w-4 h-4 rounded-full bg-surface-variant border-4 border-surface-container-lowest relative z-10"></div>
+<h4 class="text-body-lg font-body-lg font-semibold text-on-surface">Day 2: Settling In</h4>
+<span class="text-label-caps font-label-caps text-on-surface-variant ml-auto">Oct 13</span>
+</div>
+<div class="flex flex-col gap-stack-sm pl-7">
+<!-- Activity Card (Lodging) -->
+<div class="bg-surface-bright rounded-lg p-3 shadow-sm border-l-4 border-l-primary-container hover:shadow-md transition-shadow cursor-pointer relative group">
+<!-- Collaborative Presence Indicator -->
+<div class="absolute -right-1 -top-1 w-3 h-3 bg-tertiary-fixed rounded-full shadow-sm animate-pulse hidden group-hover:block" title="Sarah is viewing"></div>
+<div class="flex justify-between items-start mb-1">
+<span class="text-body-sm font-body-sm font-medium text-on-surface">Check-in: Ubud Villa</span>
+<span class="text-label-caps font-label-caps text-on-surface-variant">15:00</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Confirmation: #HK8922</p>
+</div>
+<!-- Activity Card (Dining) -->
+<div class="bg-surface-bright rounded-lg p-3 shadow-sm border-l-4 border-l-secondary hover:shadow-md transition-shadow cursor-pointer">
+<div class="flex justify-between items-start mb-1">
+<span class="text-body-sm font-body-sm font-medium text-on-surface">Welcome Dinner</span>
+<span class="text-label-caps font-label-caps text-on-surface-variant">19:30</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Locavore (Reservation pending)</p>
+</div>
+</div>
+</div>
+<!-- Day 3 -->
+<div class="relative z-10">
+<div class="flex items-center gap-3 mb-stack-sm bg-surface-container-lowest py-1">
+<div class="w-4 h-4 rounded-full bg-surface-variant border-4 border-surface-container-lowest relative z-10"></div>
+<h4 class="text-body-lg font-body-lg font-semibold text-on-surface">Day 3: Adventure</h4>
+<span class="text-label-caps font-label-caps text-on-surface-variant ml-auto">Oct 14</span>
+</div>
+<div class="flex flex-col gap-stack-sm pl-7">
+<!-- Activity Card (Activity) -->
+<div class="bg-primary-fixed-dim bg-opacity-20 rounded-lg p-3 shadow-sm border-l-4 border-l-secondary-container hover:shadow-md transition-shadow cursor-pointer">
+<div class="flex justify-between items-start mb-1">
+<div class="flex items-center gap-1">
+<span class="text-body-sm font-body-sm font-medium text-on-surface">Mount Batur Sunrise Trek</span>
+<span class="material-symbols-outlined text-[14px] text-secondary">new_releases</span>
+</div>
+<span class="text-label-caps font-label-caps text-on-surface-variant">02:00</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Recently added by Sarah</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick Add Action -->
+<div class="p-4 border-t border-surface-container bg-surface-container-lowest">
+<button class="w-full flex items-center justify-center gap-2 py-3 bg-secondary text-white rounded-full hover:shadow-lg hover:-translate-y-0.5 transition-all shadow-[0px_4px_20px_rgba(253,110,96,0.3)] font-medium">
+<span class="material-symbols-outlined">add</span>
+                            Add Activity
+                        </button>
+</div>
+</section>
+</aside>
+</div>
+</main>
+</body></html>
