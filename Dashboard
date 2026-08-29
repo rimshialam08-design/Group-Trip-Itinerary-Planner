@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>OOmechala - Dashboard</title>
+    
+    <!-- Standard Tailwind CDN - No complex custom configurations needed -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .hover-lift { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+        .hover-lift:hover { transform: translateY(-2px); box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1); }
+    </style>
+</head>
+
+<body class="bg-slate-50 text-slate-800 min-h-screen flex">
+
+    <!-- Desktop SideNavBar -->
+    <nav class="bg-white h-screen w-64 sticky top-0 border-r border-slate-200 flex flex-col py-8 px-4 gap-6 shrink-0 hidden md:flex z-50">
+        
+        <!-- Header -->
+        <div class="flex items-center gap-3 mb-2 px-2">
+            <div class="w-10 h-10 rounded-xl bg-teal-100 flex items-center justify-center text-teal-700 shrink-0">
+                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">explore</span>
+            </div>
+            <div>
+                <h1 class="text-xl font-bold text-slate-900 tracking-tight">OOmechala</h1>
+                <p class="text-[11px] font-semibold tracking-wider text-slate-500 uppercase">Organized Adventure</p>
+            </div>
+        </div> 
+
+        <!-- Main Nav Tabs -->
+        <ul class="flex flex-col gap-1 flex-grow">
+            <li>
+                <a class="flex items-center gap-3 px-4 py-3 bg-teal-50 text-teal-700 rounded-xl font-semibold transition-colors" href="#">
+                    <span class="material-symbols-outlined">map</span>
+                    <span class="text-sm">My Trips</span>
+                </a>
+            </li>
+            <li>
+                <a class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-xl font-medium transition-colors" href="#">
+                    <span class="material-symbols-outlined">group</span>
+                    <span class="text-sm">Collaborators</span>
+                </a>
+            </li>
+            <li>
+                <a class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-xl font-medium transition-colors" href="#">
+                    <span class="material-symbols-outlined">smart_toy</span>
+                    <span class="text-sm">Itinerary AI</span>
+                </a>
+            </li>
+            <li>
+                <a class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-xl font-medium transition-colors" href="#">
+                    <span class="material-symbols-outlined">payments</span>
+                    <span class="text-sm">Budget</span>
+                </a>
+            </li>
+            <li>
+                <a class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-xl font-medium transition-colors" href="#">
+                    <span class="material-symbols-outlined">how_to_vote</span>
+                    <span class="text-sm">Voting</span>
+                </a>
+            </li>
+        </ul>
+
+        <!-- CTA & Footer -->
+        <div class="mt-auto flex flex-col gap-4">
+            <button class="w-full py-2.5 bg-slate-900 text-white rounded-xl text-sm font-semibold hover:bg-slate-800 transition-colors">
+                Invite Friends
+            </button>
+            <div class="h-px bg-slate-200 w-full my-2"></div>
+            <ul class="flex flex-col gap-1">
+                <li>
+                    <a class="flex items-center gap-3 px-4 py-2 text-slate-500 hover:text-slate-900 rounded-xl text-sm font-medium transition-colors" href="#">
+                        <span class="material-symbols-outlined">help_outline</span>
+                        Help
+                    </a>
+                </li>
+                <li>
+                    <a class="flex items-center gap-3 px-4 py-2 text-slate-500 hover:text-slate-900 rounded-xl text-sm font-medium transition-colors" href="#">
+                        <span class="material-symbols-outlined">logout</span>
+                        Sign Out
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="flex-1 w-full pb-20 md:pb-0">
+        
+        <!-- Mobile Top Nav -->
+        <header class="md:hidden flex justify-between items-center px-6 py-4 sticky top-0 bg-white z-40 border-b border-slate-200">
+            <h1 class="text-lg font-bold text-slate-900">OOmechala</h1>
+            <div class="w-8 h-8 rounded-full overflow-hidden bg-slate-200">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDClk4-9A74OMJtGnod2E83LU-5J3TXWBq0Nw7GhfBAeHC3ps8jc93yIRFpVHYHAIn2U4mxJj865pirgzJ99vb_HfRgySEcWpraFs3HhkoOqsO6PYUiqr4qIWm1KEMsb2RfLBXgYkNg5TWmulU219HXsKu0muvsKe7DKIAWcc-BJeU5I10a9N2V9dVdg6z6g4KOq3eaX2eDHG4QNGfutthU8LWVngpj-se7keBO4Y-uzaDQN-XrQrMk" alt="Profile" class="w-full h-full object-cover"/>
+            </div>
+        </header>
+
+        <div class="max-w-[1440px] mx-auto px-6 lg:px-10 py-8">
+            
+            <!-- Hero Section -->
+            <section class="mb-10 bg-white rounded-3xl p-8 lg:p-12 border border-slate-200 shadow-sm relative overflow-hidden">
+                <div class="relative z-10 max-w-2xl">
+                    <p class="text-lg font-medium text-slate-500 mb-2">Good morning, <span class="text-slate-900 font-semibold">Rimshi</span></p>
+                    <h2 class="text-4xl font-bold text-slate-900 leading-tight mb-8">Ready for your next adventure?</h2>
+                    
+                    <div class="flex flex-wrap gap-4">
+                        <button class="bg-teal-600 text-white px-6 py-3 rounded-xl font-semibold flex items-center gap-2 hover-lift">
+                            <span class="material-symbols-outlined text-[20px]">add</span>
+                            New Trip Room
+                        </button>
+                        <button class="px-6 py-3 rounded-xl font-semibold text-slate-700 bg-slate-100 flex items-center gap-2 hover:bg-slate-200 transition-colors">
+                            <span class="material-symbols-outlined text-[20px]">search</span>
+                            Explore Destinations
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Grid Layout -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                
+                <!-- Main Content Column (Trip Rooms) -->
+                <div class="lg:col-span-8 flex flex-col gap-6">
+                    <div class="flex justify-between items-end">
+                        <h3 class="text-2xl font-bold text-slate-900">Your Trip Rooms</h3>
+                        <a class="text-sm font-semibold text-teal-600 hover:text-teal-700" href="#">View All</a>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        
+                        <!-- Create Room Card -->
+                        <div class="border-2 border-dashed border-slate-300 rounded-2xl h-[280px] flex flex-col items-center justify-center p-6 text-center cursor-pointer hover:border-teal-500 hover:bg-teal-50/50 transition-colors group">
+                            <div class="w-14 h-14 rounded-full bg-slate-100 flex items-center justify-center mb-4 group-hover:bg-teal-100 transition-colors">
+                                <span class="material-symbols-outlined text-3xl text-slate-400 group-hover:text-teal-600">add_circle</span>
+                            </div>
+                            <h4 class="text-lg font-bold text-slate-900 mb-1">Create a Trip Room</h4>
+                            <p class="text-sm text-slate-500">Start planning a new adventure from scratch or with AI.</p>
+                        </div>
+
+                        <!-- Trip Room Card 1 (Draft) -->
+                        <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover-lift flex flex-col h-[280px] cursor-pointer">
+                            <div class="h-32 relative overflow-hidden bg-slate-100">
+                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6t5fumbPKmTon1C_sze-npGrK1AUOyKnVU9I8HH6zq9HTxThnYqUvBi-_Gc9b2-PFov_MTsRc9-DguqG21VvbkyvFKJAnJ9q44RYip-UDEYis71iLy2_gModRFmTXuZhFWCp_baoYdqGV_9XsWORFlmwg8bhcRl8jld-6PCuulN04lKPlZmF62hzBjjXUewOXFVxIeJUq1FNAI6Bk02OegTdTGtX2o_R-NWkBw81BU37ebseIygxO" alt="Kyoto" class="w-full h-full object-cover"/>
+                                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/70 to-transparent"></div>
+                                <div class="absolute top-3 left-4 bg-white/90 backdrop-blur-sm text-teal-700 text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-md shadow-sm flex items-center gap-1.5">
+                                    <div class="w-1.5 h-1.5 rounded-full bg-teal-500"></div>
+                                    Planning
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col justify-between">
+                                <div>
+                                    <h4 class="text-lg font-bold text-slate-900 mb-1 line-clamp-1">Kyoto Explorers</h4>
+                                    <p class="text-sm text-slate-500 flex items-center gap-1.5">
+                                        <span class="material-symbols-outlined text-[16px]">calendar_month</span>
+                                        Oct 12 - Oct 20, 2024
+                                    </p>
+                                </div>
+                                <div class="flex items-center justify-between mt-4">
+                                    <div class="flex -space-x-2">
+                                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeg80cMdVOvuIvnwnQNCk_P-BFfvkdSs9DYQ4G3PcSiYP-o_bYfhPzNW9m9OlmpuHDUetKxAO0gJghct2IX4h5wCBdb0MM-khuqlK8giWirGXBiumlpiFPxMxfxbC9EC76D8I_Bvl7iiDvSsO9HERkNv1eQVBkImzPCNJhAHdB_pCcPY4GYmE0xHctRjmKjH6RNLZW-IAfJZ86PCzhxuQXvGN8bAYAYT3HijPPfLhVfPr0hI1rBmTX" class="w-8 h-8 rounded-full border-2 border-white object-cover" />
+                                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4UlkRrWELFT94_kc0eqWpnkyIZZXS6ua0TTr6WUda6IUQU_fjgBS3zUkbEUlCZPJRO_UKyTS5IkMdCoSvaQaTWk4miYjbTDe1SG1tzVkCDrUKdxXRqW6cuHmZzwsfOpoUM-rTI-T3gyFYebXGIBq2JxoMoMdbkIOAkWwjjjeKvI9AZu2XWx3rm-n4Y3rZ3ztTf8S83eHyZoDrxT0S5CvQTK7AMcp85LQoJncQbrqvUlgc1IClaW11" class="w-8 h-8 rounded-full border-2 border-white object-cover" />
+                                        <div class="w-8 h-8 rounded-full border-2 border-white bg-slate-100 flex items-center justify-center text-xs font-semibold text-slate-600">+2</div>
+                                    </div>
+                                    <span class="text-xs font-medium text-slate-600 bg-slate-100 px-2.5 py-1 rounded-md">7 pending</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Trip Room Card 2 (Completed) -->
+                        <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover-lift flex flex-col h-[280px] cursor-pointer">
+                            <div class="h-32 relative overflow-hidden bg-slate-100">
+                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7U2YH5i5gS9Fyp_AexQt0iEIstGAJ4J9lVS5J8Xr59br1uEBSiRLS-4caFTMM5Kho1soxCqZZnNnCF-aUQBkoqHYaaQgbOgPheKkGc3gxRl9RSPwppSuV4OwBk_R9ksb8jXST1KThIwYRf-mky-vz1AlBPdSw6Yh2W5coHOUGvIBwTa7FzDLH0WlzEQAcCZ8n2HAKU6q3d3MoEbEXIzmuAhCHjZ49SCV6G5ZGgfoIYjDePHNhfSYq" alt="Santorini" class="w-full h-full object-cover"/>
+                                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/70 to-transparent"></div>
+                                <div class="absolute top-3 left-4 bg-white/90 backdrop-blur-sm text-slate-800 text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-md shadow-sm flex items-center gap-1.5">
+                                    <span class="material-symbols-outlined text-[14px] text-green-600">check_circle</span>
+                                    Completed
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col justify-between">
+                                <div>
+                                    <h4 class="text-lg font-bold text-slate-900 mb-1 line-clamp-1">Santorini Getaway</h4>
+                                    <p class="text-sm text-slate-500 flex items-center gap-1.5">
+                                        <span class="material-symbols-outlined text-[16px]">calendar_month</span>
+                                        Jun 5 - Jun 12, 2023
+                                    </p>
+                                </div>
+                                <div class="flex items-center justify-between mt-4">
+                                    <div class="flex -space-x-2">
+                                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeLsdlhVidAqqpYZ3rzuh3K9aDyqcagGIQ5cWdeUA-5zD8J6T5P2mUaVdXtlYhy26dRx8yhY5AwMtic_6lDVYXLuq-V0o2HNQtr2K5sVL8X0plrP9YZQCSo9anayo01NYLAeakeotSf5ZrMK_fFwWbWlBitpuJDEMMLStayw-PxIXoMVPYJF_JPonFh6qtvBoWE1TlRnMZXXC_KE0nUB7aedia_22zwTUcWLCNnmpt06FqeA3NS-vO" class="w-8 h-8 rounded-full border-2 border-white object-cover" />
+                                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZwjnE2uE2WpHnDUdp_mnYQyoxrBEnGc6EcjKdIGP8dmUi9TMp_lLw-8_KyxU5yOKwPxZ4D36m3oy8Flrr1Mq1ENZZz0a89M229LdHYMNGr8GWFKa1TMp2cWWlbDt4QIDYa_Wn5wE6wfaJIUUFxseKx_3LKoWQqgUEscb31H0HiHb46bTjaEcLiLJ8Jk4mNTfDfgLa6wl3j9b5NcY9FvhVK1FM70MjkC3xbOv3Ghg6rHo2vxRfMNvD" class="w-8 h-8 rounded-full border-2 border-white object-cover" />
+                                    </div>
+                                    <button class="text-sm font-semibold text-slate-700 border border-slate-200 px-3 py-1.5 rounded-lg hover:bg-slate-50 transition-colors">
+                                        View Gallery
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Sidebar Column (Quick Actions & Activity) -->
+                <div class="lg:col-span-4 flex flex-col gap-8">
+                    
+                    <!-- Quick Actions Panel -->
+                    <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm">
+                        <h3 class="text-lg font-bold text-slate-900 mb-4 flex items-center gap-2">
+                            <span class="material-symbols-outlined text-slate-400 text-[20px]">bolt</span>
+                            Quick Actions
+                        </h3>
+                        <div class="flex flex-col gap-2">
+                            <button class="w-full flex items-center gap-3 p-3 rounded-xl hover:bg-slate-50 transition-colors text-left group">
+                                <div class="w-10 h-10 rounded-lg bg-indigo-50 flex items-center justify-center text-indigo-600 group-hover:bg-indigo-100 transition-colors">
+                                    <span class="material-symbols-outlined text-[20px]">person_add</span>
+                                </div>
+                                <div>
+                                    <div class="text-sm font-semibold text-slate-900">Invite a Collaborator</div>
+                                    <div class="text-xs text-slate-500">Add friends to ongoing trips</div>
+                                </div>
+                            </button>
+                            <button class="w-full flex items-center gap-3 p-3 rounded-xl hover:bg-slate-50 transition-colors text-left group">
+                                <div class="w-10 h-10 rounded-lg bg-sky-50 flex items-center justify-center text-sky-600 group-hover:bg-sky-100 transition-colors">
+                                    <span class="material-symbols-outlined text-[20px]">flight_takeoff</span>
+                                </div>
+                                <div>
+                                    <div class="text-sm font-semibold text-slate-900">Browse Flights</div>
+                                    <div class="text-xs text-slate-500">Check rates for saved dates</div>
+                                </div>
+                            </button>
+                            <button class="w-full flex items-center gap-3 p-3 rounded-xl hover:bg-slate-50 transition-colors text-left group">
+                                <div class="w-10 h-10 rounded-lg bg-emerald-50 flex items-center justify-center text-emerald-600 group-hover:bg-emerald-100 transition-colors">
+                                    <span class="material-symbols-outlined text-[20px]">receipt_long</span>
+                                </div>
+                                <div>
+                                    <div class="text-sm font-semibold text-slate-900">Log an Expense</div>
+                                    <div class="text-xs text-slate-500">Update budget trackers</div>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Recent Activity Panel -->
+                    <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm flex-1">
+                        <h3 class="text-lg font-bold text-slate-900 mb-6 flex items-center gap-2">
+                            <span class="material-symbols-outlined text-slate-400 text-[20px]">history</span>
+                            Recent Activity
+                        </h3>
+                        
+                        <div class="relative pl-4 border-l border-slate-200 space-y-6">
+                            <!-- Activity Item 1 -->
+                            <div class="relative">
+                                <div class="absolute -left-[21px] top-1.5 w-2.5 h-2.5 rounded-full bg-teal-500 ring-4 ring-white"></div>
+                                <p class="text-sm text-slate-700 mb-1">
+                                    <span class="font-bold text-slate-900">Sarah</span> voted on <span class="font-semibold text-slate-900">Lodging Options</span>
+                                </p>
+                                <p class="text-[11px] font-semibold tracking-wide text-slate-400 uppercase">Kyoto Explorers • 2h ago</p>
+                            </div>
+                            <!-- Activity Item 2 -->
+                            <div class="relative">
+                                <div class="absolute -left-[21px] top-1.5 w-2.5 h-2.5 rounded-full bg-slate-300 ring-4 ring-white"></div>
+                                <p class="text-sm text-slate-700 mb-1">
+                                    <span class="font-bold text-slate-900">You</span> added a new note to <span class="font-semibold text-slate-900">Day 3 Itinerary</span>
+                                </p>
+                                <p class="text-[11px] font-semibold tracking-wide text-slate-400 uppercase">Kyoto Explorers • Yesterday</p>
+                            </div>
+                            <!-- Activity Item 3 -->
+                            <div class="relative">
+                                <div class="absolute -left-[21px] top-1.5 w-2.5 h-2.5 rounded-full bg-indigo-500 ring-4 ring-white"></div>
+                                <p class="text-sm text-slate-700 mb-1">
+                                    <span class="font-bold text-slate-900">David</span> settled a balance of <span class="font-semibold text-slate-900">$45.00</span>
+                                </p>
+                                <p class="text-[11px] font-semibold tracking-wide text-slate-400 uppercase">Santorini Getaway • 3d ago</p>
+                            </div>
+                        </div>
+                        
+                        <button class="w-full mt-8 py-2 text-sm font-semibold text-slate-600 hover:text-slate-900 hover:bg-slate-50 transition-colors text-center border border-slate-200 rounded-xl">
+                            View Activity Log
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Mobile Bottom Navigation -->
+    <nav class="md:hidden fixed bottom-0 left-0 w-full bg-white/90 backdrop-blur-md border-t border-slate-200 z-50 px-2 pb-safe shadow-[0_-4px_20px_rgba(0,0,0,0.05)]">
+        <ul class="flex justify-around items-center h-16">
+            <li class="flex-1">
+                <a class="flex flex-col items-center justify-center w-full h-full text-teal-600" href="#">
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+                    <span class="text-[10px] font-semibold mt-1">Home</span>
+                </a>
+            </li>
+            <li class="flex-1">
+                <a class="flex flex-col items-center justify-center w-full h-full text-slate-400 hover:text-slate-600 transition-colors" href="#">
+                    <span class="material-symbols-outlined">map</span>
+                    <span class="text-[10px] font-semibold mt-1">Trips</span>
+                </a>
+            </li>
+            <li class="flex-1 relative -top-5">
+                <button class="w-12 h-12 rounded-full bg-slate-900 text-white flex items-center justify-center shadow-lg hover-lift mx-auto ring-4 ring-slate-50">
+                    <span class="material-symbols-outlined">add</span>
+                </button>
+            </li>
+            <li class="flex-1">
+                <a class="flex flex-col items-center justify-center w-full h-full text-slate-400 hover:text-slate-600 transition-colors" href="#">
+                    <span class="material-symbols-outlined">group</span>
+                    <span class="text-[10px] font-semibold mt-1">Collabs</span>
+                </a>
+            </li>
+            <li class="flex-1">
+                <a class="flex flex-col items-center justify-center w-full h-full text-slate-400 hover:text-slate-600 transition-colors" href="#">
+                    <span class="material-symbols-outlined">person</span>
+                    <span class="text-[10px] font-semibold mt-1">Profile</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+</body>
+</html>
